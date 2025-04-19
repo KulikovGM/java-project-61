@@ -5,6 +5,23 @@ import java.util.Scanner;
 public class Cli {
     public static int gameNumber;
     public static String name;
+
+    public static void setGameNumber(int gameNumber) {
+        Cli.gameNumber = gameNumber;
+    }
+
+    public static void getByName() {
+        System.out.print("May I have your name? ");
+        Scanner scan1 = new Scanner(System.in);
+        name = scan1.nextLine();
+        System.out.println("Hello, " + name + "!");
+    }
+}
+
+/*
+public class Cli {
+    public static int gameNumber;
+    public static String name;
     public static void getNumber() {
         System.out.println("Please enter the game number and press Enter.\n"
                 + "1 - Greet\n"
@@ -24,4 +41,4 @@ public class Cli {
         name = scan1.nextLine();
         System.out.println("Hello, " + name + "!");
     }
-}
+}*/
