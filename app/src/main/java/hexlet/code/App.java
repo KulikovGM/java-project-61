@@ -24,7 +24,7 @@ public class App {
             Even.gameEven();
         } else if (gameNumber == 3) {
             Cli.greetingByName();
-            //Add game number 3
+            Calc.gameCalc();
         } else {
             System.out.println("We don't have game number " + gameNumber);
         }
