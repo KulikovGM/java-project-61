@@ -5,3 +5,4 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=KulikovGM_java-project-61&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=KulikovGM_java-project-61)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=KulikovGM_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=KulikovGM_java-project-61)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=KulikovGM_java-project-61&metric=coverage)](https://sonarcloud.io/summary/new_code?id=KulikovGM_java-project-61)
+https://asciinema.org/a/w1DCRaThsadp5GWO33C2e4tX8
