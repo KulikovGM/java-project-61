@@ -9,6 +9,7 @@ public class Calc {
             int number = (int) (100 * Math.random() + 1);
             int number2 = (int) (100 * Math.random() + 1);
             String sign = "+"; //How random change -+*?
+
             System.out.println("Question: " + number + sign + number2);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
