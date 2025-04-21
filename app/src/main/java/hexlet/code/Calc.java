@@ -8,38 +8,45 @@ public class Calc {
         for (int i = 0; i < 3; i++) {
             int number = (int) (100 * Math.random() + 1);
             int number2 = (int) (100 * Math.random() + 1);
-            String sign = "+"; //How random change -+*?
-
+            String sign = switch ((int) (Math.random() + 1)) {
+                case 1 -> "+";
+                case 2 -> "-";
+                default -> "*";
+            };
             System.out.println("Question: " + number + sign + number2);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
             System.out.println("Your answer: " + answer);
-            if (sign.equals("+")) {
-                if (answer == (number + number2)) {
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                            + (number + number2) + "'.");
-                    System.out.println("Let's try again, " + Cli.name + "!");
-                    return;
+            switch (sign) {
+                case "+" -> {
+                    if (answer == (number + number2)) {
+                        System.out.println("Correct!");
+                    } else {
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                                + (number + number2) + "'.");
+                        System.out.println("Let's try again, " + Cli.name + "!");
+                        return;
+                    }
                 }
-            } else if (sign.equals("-")) {
-                if (answer == (number - number2)) {
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                            + (number - number2) + "'.");
-                    System.out.println("Let's try again, " + Cli.name + "!");
-                    return;
+                case "-" -> {
+                    if (answer == (number - number2)) {
+                        System.out.println("Correct!");
+                    } else {
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                                + (number - number2) + "'.");
+                        System.out.println("Let's try again, " + Cli.name + "!");
+                        return;
+                    }
                 }
-            } else if (sign.equals("*")) {
-                if (answer == (number * number2)) {
-                    System.out.println("Correct!");
-                } else {
-                    System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                            + (number * number2) + "'.");
-                    System.out.println("Let's try again, " + Cli.name + "!");
-                    return;
+                case "*" -> {
+                    if (answer == (number * number2)) {
+                        System.out.println("Correct!");
+                    } else {
+                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                                + (number * number2) + "'.");
+                        System.out.println("Let's try again, " + Cli.name + "!");
+                        return;
+                    }
                 }
             }
         }
