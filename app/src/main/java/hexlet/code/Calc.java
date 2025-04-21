@@ -8,7 +8,7 @@ public class Calc {
         for (int i = 0; i < 3; i++) {
             int number = (int) (100 * Math.random() + 1);
             int number2 = (int) (100 * Math.random() + 1);
-            String sign = switch ((int) (Math.random() + 1)) {
+            String sign = switch ((int) (Math.random() + 1.5)) {
                 case 1 -> "+";
                 case 2 -> "-";
                 default -> "*";
@@ -47,6 +47,9 @@ public class Calc {
                         System.out.println("Let's try again, " + Cli.name + "!");
                         return;
                     }
+                }
+                default -> {
+                    return;
                 }
             }
         }
