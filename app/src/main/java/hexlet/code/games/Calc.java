@@ -1,5 +1,6 @@
-package hexlet.code;
+package hexlet.code.games;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Calc {
@@ -8,17 +9,20 @@ public class Calc {
         for (int i = 0; i < 3; i++) {
             int number = (int) (100 * Math.random() + 1);
             int number2 = (int) (100 * Math.random() + 1);
-            String sign = switch ((int) (Math.random() + 1.5)) {
-                case 1 -> "+";
-                case 2 -> "-";
-                default -> "*";
+            Random operatorChoice = new Random();
+            int operator = operatorChoice.nextInt(3);
+            String sign = switch (operator) {
+                case 0 -> "+";
+                case 1 -> "-";
+                case 2 -> "*";
+                default -> "";
             };
             System.out.println("Question: " + number + sign + number2);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
             System.out.println("Your answer: " + answer);
-            switch (sign) {
-                case "+" -> {
+            switch (operator) {
+                case 0 -> {
                     if (answer == (number + number2)) {
                         System.out.println("Correct!");
                     } else {
@@ -28,7 +32,7 @@ public class Calc {
                         return;
                     }
                 }
-                case "-" -> {
+                case 1 -> {
                     if (answer == (number - number2)) {
                         System.out.println("Correct!");
                     } else {
@@ -38,7 +42,7 @@ public class Calc {
                         return;
                     }
                 }
-                case "*" -> {
+                case 2 -> {
                     if (answer == (number * number2)) {
                         System.out.println("Correct!");
                     } else {

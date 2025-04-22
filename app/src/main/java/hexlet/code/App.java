@@ -17,16 +17,7 @@ public class App {
         gameNumber = scanner.nextInt();
         System.out.println("Your choice: " + gameNumber + "\n");
 
-        if (gameNumber == 1) {
-            Cli.greetingByName();
-        } else if (gameNumber == 2) {
-            Cli.greetingByName();
-            Even.gameEven();
-        } else if (gameNumber == 3) {
-            Cli.greetingByName();
-            Calc.gameCalc();
-        } else {
-            System.out.println("We don't have game number " + gameNumber);
-        }
+        Engine.game(gameNumber);
+
     }
 }
