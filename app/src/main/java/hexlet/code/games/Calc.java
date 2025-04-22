@@ -4,12 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Calc {
-    public static void gameCalc() {
+    public static void game() {
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < 3; i++) {
-            int number = (int) (100 * Math.random() + 1);
-            int number2 = (int) (100 * Math.random() + 1);
             Random operatorChoice = new Random();
+            int number = operatorChoice.nextInt(100);
+            int number2 = operatorChoice.nextInt(100);
             int operator = operatorChoice.nextInt(3);
             String sign = switch (operator) {
                 case 0 -> "+";
