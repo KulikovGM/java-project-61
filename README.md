@@ -6,12 +6,22 @@
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=KulikovGM_java-project-61&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=KulikovGM_java-project-61)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=KulikovGM_java-project-61&metric=coverage)](https://sonarcloud.io/summary/new_code?id=KulikovGM_java-project-61)
 
-### Asciinema records (Win):
-https://asciinema.org/a/w1DCRaThsadp5GWO33C2e4tX8
+### Game Even:
+https://asciinema.org/a/gh0Lq6hNUxy7O5xCegqsjsVOm
+[![asciicast](https://asciinema.org/a/gh0Lq6hNUxy7O5xCegqsjsVOm.svg)](https://asciinema.org/a/gh0Lq6hNUxy7O5xCegqsjsVOm)
 
-[![asciicast](https://asciinema.org/a/w1DCRaThsadp5GWO33C2e4tX8.svg)](https://asciinema.org/a/w1DCRaThsadp5GWO33C2e4tX8)
+### Game Calc:
+https://asciinema.org/a/T0ANj6JNeOubyuTNCyNXgzJY8
+[![asciicast](https://asciinema.org/a/T0ANj6JNeOubyuTNCyNXgzJY8.svg)](https://asciinema.org/a/T0ANj6JNeOubyuTNCyNXgzJY8)
 
-### Asciinema records (Lose):
-https://asciinema.org/a/b2cJxRT4yTWX3AuNXZxpPLjlu
+### Game GCD:
+https://asciinema.org/a/p2KsfnuJrCsfCSwC9m0bR3mvQ
+[![asciicast](https://asciinema.org/a/p2KsfnuJrCsfCSwC9m0bR3mvQ.svg)](https://asciinema.org/a/p2KsfnuJrCsfCSwC9m0bR3mvQ)
 
-[![asciicast](https://asciinema.org/a/b2cJxRT4yTWX3AuNXZxpPLjlu.svg)](https://asciinema.org/a/b2cJxRT4yTWX3AuNXZxpPLjlu)
+### Game Progression:
+https://asciinema.org/a/mZnRCO2fyPrVAtbii1Ab49IJB
+[![asciicast](https://asciinema.org/a/mZnRCO2fyPrVAtbii1Ab49IJB.svg)](https://asciinema.org/a/mZnRCO2fyPrVAtbii1Ab49IJB)
+
+### Game Prime:
+https://asciinema.org/a/MCpHuQRfEXMPExRVP5LVLIvzC
+[![asciicast](https://asciinema.org/a/MCpHuQRfEXMPExRVP5LVLIvzC.svg)](https://asciinema.org/a/MCpHuQRfEXMPExRVP5LVLIvzC)
