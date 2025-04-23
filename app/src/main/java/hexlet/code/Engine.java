@@ -4,6 +4,7 @@ import hexlet.code.games.Calc;
 import hexlet.code.games.Cli;
 import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
 
 public class Engine {
     public static void runGame(int gameNumber) {
@@ -18,6 +19,9 @@ public class Engine {
         } else if (gameNumber == 4) {
             Cli.greetingByName();
             GCD.game();
+        } else if (gameNumber == 5) {
+            Cli.greetingByName();
+            Progression.game();
         }
     }
 }
