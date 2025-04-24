@@ -2,13 +2,15 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
+import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Even {
     public static void game() {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (int i = 0; i < 3; i++) {
-            int number = (int) (100 * Math.random() + 1);
+            SecureRandom operatorChoice = new SecureRandom();
+            int number = operatorChoice.nextInt(100);
             System.out.println("Question: " + number);
             Scanner scan1 = new Scanner(System.in);
             String answer = scan1.nextLine();

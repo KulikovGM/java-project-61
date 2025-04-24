@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,9 +10,9 @@ public class Calc {
     public static void game() {
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < 3; i++) {
-            Random operatorChoice = new Random();
-            int number = operatorChoice.nextInt(100);
-            int number2 = operatorChoice.nextInt(100);
+            SecureRandom operatorChoice = new SecureRandom();
+            int number = operatorChoice.nextInt(30);
+            int number2 = operatorChoice.nextInt(30);
             int operator = operatorChoice.nextInt(3);
             String sign = switch (operator) {
                 case 0 -> "+";

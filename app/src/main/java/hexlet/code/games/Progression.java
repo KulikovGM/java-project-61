@@ -2,6 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class Progression {
     public static void game() {
         System.out.println("What number is missing in the progression?");
         for (int i = 0; i < 3; i++) {
-            Random operatorChoice = new Random();
+            SecureRandom operatorChoice = new SecureRandom();
             int firstNum = operatorChoice.nextInt(10);
             int addedNum = operatorChoice.nextInt(2, 5);
             int lustNum = operatorChoice.nextInt(10);
