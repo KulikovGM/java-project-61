@@ -22,11 +22,11 @@ public class GCD {
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                         + gcd(number, number2) + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
     }
 
     public static int gcd(int a, int b) {

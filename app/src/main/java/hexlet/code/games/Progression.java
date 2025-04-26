@@ -6,10 +6,12 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Progression {
+    public static int rangeNumb = 10;
+    public static int addNumberIn = 2;
+    public static int addNumberOut = 5;
+
     public static void game() {
-        int rangeNumb = 10;
-        int addNumberIn = 2;
-        int addNumberOut = 5;
+
         System.out.println("What number is missing in the progression?");
         for (int i = 0; i < 3; i++) {
             SecureRandom operatorChoice = new SecureRandom();
@@ -36,10 +38,10 @@ public class Progression {
             } else {
                 System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                         + currentNum + "'.");
-                System.out.println("Let's try again, " + Cli.name + "!");
+                System.out.println("Let's try again, " + Cli.getName() + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
     }
 }
