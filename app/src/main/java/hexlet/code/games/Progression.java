@@ -6,9 +6,9 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Progression {
-    public static int rangeNumb = 10;
-    public static int addNumberIn = 2;
-    public static int addNumberOut = 5;
+    public static final int rangeNumb = 10;
+    public static final int addNumberIn = 2;
+    public static final int addNumberOut = 5;
 
     public static void game() {
 
