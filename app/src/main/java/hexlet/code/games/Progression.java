@@ -3,17 +3,19 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 
 import java.security.SecureRandom;
-import java.util.Random;
 import java.util.Scanner;
 
 public class Progression {
     public static void game() {
+        int rangeNumb = 10;
+        int addNumberIn = 2;
+        int addNumberOut = 5;
         System.out.println("What number is missing in the progression?");
         for (int i = 0; i < 3; i++) {
             SecureRandom operatorChoice = new SecureRandom();
-            int firstNum = operatorChoice.nextInt(10);
-            int addedNum = operatorChoice.nextInt(2, 5);
-            int lustNum = operatorChoice.nextInt(10);
+            int firstNum = operatorChoice.nextInt(rangeNumb);
+            int addedNum = operatorChoice.nextInt(addNumberIn, addNumberOut);
+            int lustNum = operatorChoice.nextInt(rangeNumb);
             int currentNum = 0;
             int[] array = new int[10];
             System.out.print("Question: ");

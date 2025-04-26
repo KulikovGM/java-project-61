@@ -3,16 +3,16 @@ package hexlet.code.games;
 import hexlet.code.Cli;
 
 import java.security.SecureRandom;
-import java.util.Random;
 import java.util.Scanner;
 
 public class GCD {
     public static void game() {
+        int range = 100;
         System.out.println("Find the greatest common divisor of given numbers.");
         for (int i = 0; i < 3; i++) {
             SecureRandom operatorChoice = new SecureRandom();
-            int number = operatorChoice.nextInt(100);
-            int number2 = operatorChoice.nextInt(100);
+            int number = operatorChoice.nextInt(range);
+            int number2 = operatorChoice.nextInt(range);
             System.out.println("Question: " + number + " " + number2);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
