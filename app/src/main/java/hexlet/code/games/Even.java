@@ -21,7 +21,7 @@ public class Even {
                     System.out.println("Correct!");
                 } else {
                     System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.");
-                    System.out.println("Let's try again, " + Cli.name + "!");
+                    System.out.println("Let's try again, " + Cli.getName() + "!");
                     return;
                 }
             } else {
@@ -29,11 +29,11 @@ public class Even {
                     System.out.println("Correct!");
                 } else {
                     System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.");
-                    System.out.println("Let's try again, " + Cli.name + "!");
+                    System.out.println("Let's try again, " + Cli.getName() + "!");
                     return;
                 }
             }
         }
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
     }
 }

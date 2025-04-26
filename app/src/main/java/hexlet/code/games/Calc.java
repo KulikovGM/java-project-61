@@ -32,7 +32,7 @@ public class Calc {
                     } else {
                         System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                                 + (number + number2) + "'.");
-                        System.out.println("Let's try again, " + Cli.name + "!");
+                        System.out.println("Let's try again, " + Cli.getName() + "!");
                         return;
                     }
                 }
@@ -42,7 +42,7 @@ public class Calc {
                     } else {
                         System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                                 + (number - number2) + "'.");
-                        System.out.println("Let's try again, " + Cli.name + "!");
+                        System.out.println("Let's try again, " + Cli.getName() + "!");
                         return;
                     }
                 }
@@ -52,7 +52,7 @@ public class Calc {
                     } else {
                         System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
                                 + (number * number2) + "'.");
-                        System.out.println("Let's try again, " + Cli.name + "!");
+                        System.out.println("Let's try again, " + Cli.getName() + "!");
                         return;
                     }
                 }
@@ -61,6 +61,6 @@ public class Calc {
                 }
             }
         }
-        System.out.println("Congratulations, " + Cli.name + "!");
+        System.out.println("Congratulations, " + Cli.getName() + "!");
     }
 }
