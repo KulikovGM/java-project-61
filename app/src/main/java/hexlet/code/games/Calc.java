@@ -20,7 +20,7 @@ public class Calc {
                 case 2 -> "*";
                 default -> "";
             };
-            System.out.println("Question: " + number + sign + number2);
+            System.out.println("Question: " + number + " " + sign + " " + number2);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
             System.out.println("Your answer: " + answer);
