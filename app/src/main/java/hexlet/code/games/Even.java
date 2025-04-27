@@ -6,12 +6,13 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Even {
+    private static final int NUMBER_OF_ROUNDS = 3;
+    private static final int RANGE_NUMB = 30;
     public static void game() {
-        int range = 100;
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
-            int number = operatorChoice.nextInt(range);
+            int number = operatorChoice.nextInt(RANGE_NUMB);
             System.out.println("Question: " + number);
             Scanner scan1 = new Scanner(System.in);
             String answer = scan1.nextLine();

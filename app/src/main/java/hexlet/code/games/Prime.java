@@ -2,15 +2,19 @@ package hexlet.code.games;
 
 import hexlet.code.Cli;
 
-import java.util.Random;
+import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Prime {
+    private static final int NUMBER_OF_ROUNDS = 3;
+    private static final int NUMBER_FROM = 2;
+    private static final int NUMBER_TO = 20;
+
     public static void game() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        for (int i = 0; i < 3; i++) {
-            Random operatorChoice = new Random();
-            int number = operatorChoice.nextInt(2, 20);
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+            SecureRandom secureRandom = new SecureRandom();
+            int number = secureRandom.nextInt(NUMBER_FROM, NUMBER_TO);
             System.out.println("Question: " + number);
             Scanner scan1 = new Scanner(System.in);
             String answer = scan1.nextLine();

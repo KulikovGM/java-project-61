@@ -6,15 +6,17 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Calc {
+    private static final int NUMBER_OF_ROUNDS = 3;
+    private static final int NUMBER_OF_OPERATORS = 3; // '+' or '-' or '*'
+    private static final int RANGE_NUMB = 30;
+
     public static void game() {
-        int range = 30;
-        int rangeOperator = 3; // '+' or '-' or '*'
         System.out.println("What is the result of the expression?");
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
-            int number = operatorChoice.nextInt(range);
-            int number2 = operatorChoice.nextInt(range);
-            int operator = operatorChoice.nextInt(rangeOperator);
+            int number = operatorChoice.nextInt(RANGE_NUMB);
+            int number2 = operatorChoice.nextInt(RANGE_NUMB);
+            int operator = operatorChoice.nextInt(NUMBER_OF_OPERATORS);
             String sign = switch (operator) {
                 case 0 -> "+";
                 case 1 -> "-";
