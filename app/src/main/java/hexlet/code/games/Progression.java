@@ -6,9 +6,9 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Progression {
-    public static final int rangeNumb = 10;
-    public static final int addNumberIn = 2;
-    public static final int addNumberOut = 5;
+    private static final int rangeNumb = 10;
+    private static final int addNumberFrom = 2;
+    private static final int addNumberTo = 5;
 
     public static void game() {
 
@@ -16,12 +16,12 @@ public class Progression {
         for (int i = 0; i < 3; i++) {
             SecureRandom operatorChoice = new SecureRandom();
             int firstNum = operatorChoice.nextInt(rangeNumb);
-            int addedNum = operatorChoice.nextInt(addNumberIn, addNumberOut);
+            int addedNum = operatorChoice.nextInt(addNumberFrom, addNumberTo);
             int lustNum = operatorChoice.nextInt(rangeNumb);
             int currentNum = 0;
             int[] array = new int[10];
             System.out.print("Question: ");
-            for (int j = 0; j < 10; j++) {
+            for (int j = 0; j < array.length; j++) {
                 array[j] = firstNum + addedNum * j;
                 if (j == lustNum) {
                     currentNum = array[j];
