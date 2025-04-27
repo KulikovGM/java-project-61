@@ -8,29 +8,29 @@ import hexlet.code.games.Prime;
 
 public class Engine {
     // Присваиваем каждой игре конкретный номер
-    private static final int numberOfGreeting = 1;
-    private static final int numberOfEven = 2;
-    private static final int numberOfCalc = 3;
-    private static final int numberOfGCD = 4;
-    private static final int numberOfProgression = 5;
-    private static final int numberOfPrime = 6;
+    private static final int NUMBER_OF_GREETING = 1;
+    private static final int NUMBER_OF_EVEN = 2;
+    private static final int NUMBER_OF_CALC = 3;
+    private static final int NUMBER_OF_GCD = 4;
+    private static final int NUMBER_OF_PROGRESSION = 5;
+    private static final int NUMBER_OF_PRIME = 6;
 
     public static void runGame(int gameNumber) {
-        if (gameNumber == numberOfGreeting) {
+        if (gameNumber == NUMBER_OF_GREETING) {
             Cli.greetingByName();
-        } else if (gameNumber == numberOfEven) {
+        } else if (gameNumber == NUMBER_OF_EVEN) {
             Cli.greetingByName();
             Even.game();
-        } else if (gameNumber == numberOfCalc) {
+        } else if (gameNumber == NUMBER_OF_CALC) {
             Cli.greetingByName();
             Calc.game();
-        } else if (gameNumber == numberOfGCD) {
+        } else if (gameNumber == NUMBER_OF_GCD) {
             Cli.greetingByName();
             GCD.game();
-        } else if (gameNumber == numberOfProgression) {
+        } else if (gameNumber == NUMBER_OF_PROGRESSION) {
             Cli.greetingByName();
             Progression.game();
-        } else if (gameNumber == numberOfPrime) {
+        } else if (gameNumber == NUMBER_OF_PRIME) {
             Cli.greetingByName();
             Prime.game();
         }

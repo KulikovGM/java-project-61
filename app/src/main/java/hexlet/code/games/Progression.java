@@ -6,18 +6,18 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 
 public class Progression {
-    private static final int rangeNumb = 10;
-    private static final int addNumberFrom = 2;
-    private static final int addNumberTo = 5;
+    private static final int RANGE_NUMB = 10;
+    private static final int ADD_NUMBER_FROM = 2;
+    private static final int ADD_NUMBER_TO = 5;
 
     public static void game() {
 
         System.out.println("What number is missing in the progression?");
         for (int i = 0; i < 3; i++) {
             SecureRandom operatorChoice = new SecureRandom();
-            int firstNum = operatorChoice.nextInt(rangeNumb);
-            int addedNum = operatorChoice.nextInt(addNumberFrom, addNumberTo);
-            int lustNum = operatorChoice.nextInt(rangeNumb);
+            int firstNum = operatorChoice.nextInt(RANGE_NUMB);
+            int addedNum = operatorChoice.nextInt(ADD_NUMBER_FROM, ADD_NUMBER_TO);
+            int lustNum = operatorChoice.nextInt(RANGE_NUMB);
             int currentNum = 0;
             int[] array = new int[10];
             System.out.print("Question: ");
