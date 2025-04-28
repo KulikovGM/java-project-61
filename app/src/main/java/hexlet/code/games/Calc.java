@@ -14,7 +14,7 @@ public class Calc {
         System.out.println("What is the result of the expression?");
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
-            int number = operatorChoice.nextInt(RANGE_NUMB);
+            int number1 = operatorChoice.nextInt(RANGE_NUMB);
             int number2 = operatorChoice.nextInt(RANGE_NUMB);
             int operator = operatorChoice.nextInt(NUMBER_OF_OPERATORS);
             String sign = switch (operator) {
@@ -23,38 +23,35 @@ public class Calc {
                 case 2 -> "*";
                 default -> "";
             };
-            System.out.println("Question: " + number + " " + sign + " " + number2);
+            System.out.println("Question: " + number1 + " " + sign + " " + number2);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
             System.out.println("Your answer: " + answer);
             switch (operator) {
                 case 0 -> {
-                    if (answer == (number + number2)) {
-                        System.out.println("Correct!");
+                    int corAnswer = number1 + number2;
+                    if (answer == corAnswer) {
+                        correctAnswer();
                     } else {
-                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                                + (number + number2) + "'.");
-                        System.out.println("Let's try again, " + Cli.getName() + "!");
+                        wrongAnswer(answer, corAnswer);
                         return;
                     }
                 }
                 case 1 -> {
-                    if (answer == (number - number2)) {
-                        System.out.println("Correct!");
+                    int corAnswer = number1 - number2;
+                    if (answer == corAnswer) {
+                        correctAnswer();
                     } else {
-                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                                + (number - number2) + "'.");
-                        System.out.println("Let's try again, " + Cli.getName() + "!");
+                        wrongAnswer(answer, corAnswer);
                         return;
                     }
                 }
                 case 2 -> {
-                    if (answer == (number * number2)) {
-                        System.out.println("Correct!");
+                    int corAnswer = number1 * number2;
+                    if (answer == corAnswer) {
+                        correctAnswer();
                     } else {
-                        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                                + (number * number2) + "'.");
-                        System.out.println("Let's try again, " + Cli.getName() + "!");
+                        wrongAnswer(answer, corAnswer);
                         return;
                     }
                 }
@@ -64,5 +61,15 @@ public class Calc {
             }
         }
         System.out.println("Congratulations, " + Cli.getName() + "!");
+    }
+
+    public static void correctAnswer() {
+        System.out.println("Correct!");
+    }
+
+    public static void wrongAnswer(int answer, int corAnswer) {
+        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                + corAnswer + "'.");
+        System.out.println("Let's try again, " + Cli.getName() + "!");
     }
 }
