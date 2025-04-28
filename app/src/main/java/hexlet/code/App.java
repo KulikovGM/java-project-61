@@ -1,13 +1,15 @@
 package hexlet.code;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class App {
 
     public static void main(String[] args) {
         int gameNumber;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("""
+        Logger logger = Logger.getLogger(App.class.getName());
+        logger.info("""
                 Please enter the game number and press Enter.
                 1 - Greet
                 2 - Even
@@ -18,7 +20,7 @@ public class App {
                 0 - Exit
                 """);
         gameNumber = scanner.nextInt();
-        System.out.println("Your choice: " + gameNumber + "\n");
+        logger.info("Your choice: " + gameNumber + "\n");
 
         Engine.runGame(gameNumber);
 
