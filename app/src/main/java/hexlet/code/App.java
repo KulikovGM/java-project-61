@@ -20,7 +20,7 @@ public class App {
                 0 - Exit
                 """);
         gameNumber = scanner.nextInt();
-        logger.info("Your choice: " + gameNumber + "\n");
+        logger.info(String.format("Your choice: %s\n", gameNumber));
 
         Engine.runGame(gameNumber);
 
