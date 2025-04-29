@@ -20,9 +20,9 @@ public class App {
                 0 - Exit
                 """);
         gameNumber = scanner.nextInt();
-        logger.info(String.format("Your choice: %s\n", gameNumber));
-
+        if (gameNumber >= 0 && gameNumber <= 6) {
+            logger.info(String.format("Your choice: %s\n", gameNumber));
+        }
         Engine.runGame(gameNumber);
-
     }
 }

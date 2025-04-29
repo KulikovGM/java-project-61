@@ -9,6 +9,10 @@ public class Cli {
         return name;
     }
 
+    private Cli() {
+        throw new IllegalStateException("Cli class");
+    }
+
     public static void greetingByName() {
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");
