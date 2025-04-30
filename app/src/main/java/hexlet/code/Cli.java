@@ -10,7 +10,6 @@ public class Cli {
     }
 
     private Cli() {
-        throw new IllegalStateException("Cli class");
     }
 
     public static void greetingByName() {
