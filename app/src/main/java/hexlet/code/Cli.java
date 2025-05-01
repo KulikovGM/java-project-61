@@ -22,6 +22,5 @@ public final class Cli {
         Scanner scan = new Scanner(System.in);
         name = scan.nextLine();
         logger.info(String.format("Hello, %s!", name));
-        }
-
+    }
 }

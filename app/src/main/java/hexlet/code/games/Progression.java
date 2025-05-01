@@ -4,17 +4,21 @@ import hexlet.code.Cli;
 
 import java.security.SecureRandom;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
-public class Progression {
+public final class Progression {
     private static final int NUMBER_OF_ROUNDS = 3;
     private static final int RANGE_NUMB = 10;
     private static final int PROGRESSION_LENGTH = 10;
     private static final int ADD_NUMBER_FROM = 2;
     private static final int ADD_NUMBER_TO = 5;
 
-    public static void game() {
+    private Progression() {
+    }
 
-        System.out.println("What number is missing in the progression?");
+    public static void game() {
+        Logger logger = Logger.getLogger(Progression.class.getName());
+        logger.info("What number is missing in the progression?");
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             SecureRandom secureRandom = new SecureRandom();
             int firstNum = secureRandom.nextInt(RANGE_NUMB);
@@ -22,28 +26,28 @@ public class Progression {
             int missedNum = secureRandom.nextInt(RANGE_NUMB);
             int currentNum = 0;
             int[] array = new int[PROGRESSION_LENGTH];
-            System.out.print("Question: ");
+            logger.info("Question: ");
             for (int j = 0; j < PROGRESSION_LENGTH; j++) {
                 array[j] = firstNum + addedNum * j;
                 if (j == missedNum) {
                     currentNum = array[j];
-                    System.out.print(".." + " ");
+                    logger.info(".. ");
                 } else {
-                    System.out.print(array[j] + " ");
+                    logger.info(array[j] + " ");
                 }
             }
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
-            System.out.println("Your answer: " + answer);
+            logger.info("Your answer: " + answer);
             if (answer == currentNum) {
-                System.out.println("Correct!");
+                logger.info("Correct!");
             } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
+                logger.info("'" + answer + "' is wrong answer ;(. Correct answer was '"
                         + currentNum + "'.");
-                System.out.println("Let's try again, " + Cli.getName() + "!");
+                logger.info("Let's try again, " + Cli.getName() + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.getName() + "!");
+        logger.info("Congratulations, " + Cli.getName() + "!");
     }
 }
