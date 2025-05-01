@@ -20,7 +20,8 @@ public class App {
                 0 - Exit
                 """);
         gameNumber = scanner.nextInt();
-        logger.info(String.format("Your choice: %s%n", gameNumber));
+        String choiceGame = String.format("Your choice: %s%n", gameNumber);
+        logger.info(choiceGame);
         Engine.runGame(gameNumber);
     }
 }
