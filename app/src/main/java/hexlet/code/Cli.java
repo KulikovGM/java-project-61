@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public final class Cli {
     private static String name;
@@ -12,12 +13,15 @@ public final class Cli {
     private Cli() {
     }
 
+
     public static void greetingByName() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        Logger logger = Logger.getLogger(Cli.class.getName());
+        logger.info("Welcome to the Brain Games!");
+        logger.info("May I have your name? ");
+
         Scanner scan = new Scanner(System.in);
         name = scan.nextLine();
-        System.out.println("Hello, " + name + "!");
-    }
+        logger.info(String.format("Hello, %s!", name));
+        }
 
 }
