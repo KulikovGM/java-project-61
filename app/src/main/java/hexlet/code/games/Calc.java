@@ -28,10 +28,12 @@ public final class Calc {
                 case 2 -> "*";
                 default -> "";
             };
-            logger.info("Question: " + number1 + " " + sign + " " + number2);
+            String question = "Question: " + number1 + " " + sign + " " + number2;
+            logger.info(question);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
-            logger.info("Your answer: " + answer);
+            String answerMassage = "Your answer: " + answer;
+            logger.info(answerMassage);
             switch (operator) {
                 case 0 -> {
                     int corAnswer = number1 + number2;
@@ -75,8 +77,9 @@ public final class Calc {
 
     public static void wrongAnswer(int answer, int corAnswer) {
         Logger logger = Logger.getLogger(Calc.class.getName());
-        logger.info("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                + corAnswer + "'.");
+        String answerMsg = "'" + answer + "' is wrong answer ;(. Correct answer was '"
+                + corAnswer + "'.";
+        logger.info(answerMsg);
         logger.info("Let's try again, " + Cli.getName() + "!");
     }
 }

@@ -20,10 +20,12 @@ public final class Prime {
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             SecureRandom secureRandom = new SecureRandom();
             int number = secureRandom.nextInt(NUMBER_FROM, NUMBER_TO);
-            logger.info("Question: " + number);
+            String question = "Question: " + number;
+            logger.info(question);
             Scanner scan1 = new Scanner(System.in);
             String answer = scan1.nextLine();
-            logger.info("Your answer: " + answer);
+            String yourAnswer = "Your answer: " + answer;
+            logger.info(yourAnswer);
             String correctAnswer = "yes";
             for (int j = 2; j < number; j++) {
                 if (number % j == 0) {
@@ -32,10 +34,11 @@ public final class Prime {
                 }
             }
             if (answer.equals(correctAnswer)) {
-                logger.info("Your answer: " + answer);
-                System.out.println("Correct!");
+                logger.info(yourAnswer);
+                logger.info("Correct!");
             } else {
-                logger.info("'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.");
+                String wrongAnswer = "'" + answer + "' is wrong answer ;(. Correct answer was '" + correctAnswer + "'.";
+                logger.info(wrongAnswer);
                 logger.info("Let's try again, " + Cli.getName() + "!");
                 return;
             }

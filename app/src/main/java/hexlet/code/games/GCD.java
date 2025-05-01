@@ -20,15 +20,18 @@ public final class GCD {
             SecureRandom secureRandom = new SecureRandom();
             int number = secureRandom.nextInt(RANGE);
             int number2 = secureRandom.nextInt(RANGE);
-            logger.info("Question: " + number + " " + number2);
+            String question = "Question: " + number + " " + number2;
+            logger.info(question);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
-            logger.info("Your answer: " + answer);
+            String yourAnswer = "Your answer: " + answer;
+            logger.info(yourAnswer);
             if (answer == gcd(number, number2)) {
                 logger.info("Correct!");
             } else {
-                logger.info("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + gcd(number, number2) + "'.");
+                String wrongAnswer = "'" + answer + "' is wrong answer ;(. Correct answer was '"
+                        + gcd(number, number2) + "'.";
+                logger.info(wrongAnswer);
                 logger.info("Let's try again, " + Cli.getName() + "!");
                 return;
             }

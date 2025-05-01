@@ -19,15 +19,18 @@ public final class Even {
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
             int number = operatorChoice.nextInt(RANGE_NUMB);
-            logger.info("Question: " + number);
+            String question = "Question: " + number;
+            logger.info(question);
             Scanner scan1 = new Scanner(System.in);
             String answer = scan1.nextLine();
-            logger.info("Your answer: " + answer);
+            String yourAnswer = "Your answer: " + answer;
+            logger.info(yourAnswer);
             if (number % 2 == 0) {
                 if (answer.equals("yes")) {
                     logger.info("Correct!");
                 } else {
-                    logger.info("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.");
+                    String wrongAnswer = "'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.";
+                    logger.info(wrongAnswer);
                     logger.info("Let's try again, " + Cli.getName() + "!");
                     return;
                 }
@@ -35,7 +38,8 @@ public final class Even {
                 if (answer.equals("no")) {
                     logger.info("Correct!");
                 } else {
-                    logger.info("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.");
+                    String wrongAnswer = "'" + answer + "' is wrong answer ;(. Correct answer was 'no'.";
+                    logger.info(wrongAnswer);
                     logger.info("Let's try again, " + Cli.getName() + "!");
                     return;
                 }

@@ -33,17 +33,20 @@ public final class Progression {
                     currentNum = array[j];
                     logger.info(".. ");
                 } else {
-                    logger.info(array[j] + " ");
+                    String element = array[j] + " ";
+                    logger.info(element);
                 }
             }
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
-            logger.info("Your answer: " + answer);
+            String yourAnswer = "Your answer: " + answer;
+            logger.info(yourAnswer);
             if (answer == currentNum) {
                 logger.info("Correct!");
             } else {
-                logger.info("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + currentNum + "'.");
+                String wrongAnswer = "'" + answer + "' is wrong answer ;(. Correct answer was '"
+                        + currentNum + "'.";
+                logger.info(wrongAnswer);
                 logger.info("Let's try again, " + Cli.getName() + "!");
                 return;
             }
