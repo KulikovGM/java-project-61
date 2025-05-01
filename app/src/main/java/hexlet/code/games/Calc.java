@@ -4,14 +4,19 @@ import hexlet.code.Cli;
 
 import java.security.SecureRandom;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
-public class Calc {
+public final class Calc {
     private static final int NUMBER_OF_ROUNDS = 3;
     private static final int NUMBER_OF_OPERATORS = 3; // '+' or '-' or '*'
     private static final int RANGE_NUMB = 30;
 
+    private Calc() {
+    }
+
     public static void game() {
-        System.out.println("What is the result of the expression?");
+        Logger logger = Logger.getLogger(Calc.class.getName());
+        logger.info("What is the result of the expression?");
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
             int number1 = operatorChoice.nextInt(RANGE_NUMB);
@@ -23,10 +28,12 @@ public class Calc {
                 case 2 -> "*";
                 default -> "";
             };
-            System.out.println("Question: " + number1 + " " + sign + " " + number2);
+            String question = "Question: " + number1 + " " + sign + " " + number2;
+            logger.info(question);
             Scanner scan1 = new Scanner(System.in);
             int answer = scan1.nextInt();
-            System.out.println("Your answer: " + answer);
+            String answerMassage = "Your answer: " + answer;
+            logger.info(answerMassage);
             switch (operator) {
                 case 0 -> {
                     int corAnswer = number1 + number2;
@@ -60,16 +67,19 @@ public class Calc {
                 }
             }
         }
-        System.out.println("Congratulations, " + Cli.getName() + "!");
+        logger.info("Congratulations, " + Cli.getName() + "!");
     }
 
     public static void correctAnswer() {
-        System.out.println("Correct!");
+        Logger logger = Logger.getLogger(Calc.class.getName());
+        logger.info("Correct!");
     }
 
     public static void wrongAnswer(int answer, int corAnswer) {
-        System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                + corAnswer + "'.");
-        System.out.println("Let's try again, " + Cli.getName() + "!");
+        Logger logger = Logger.getLogger(Calc.class.getName());
+        String answerMsg = "'" + answer + "' is wrong answer ;(. Correct answer was '"
+                + corAnswer + "'.";
+        logger.info(answerMsg);
+        logger.info("Let's try again, " + Cli.getName() + "!");
     }
 }
