@@ -6,13 +6,10 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public final class Calc {
+public class Calc {
     private static final int NUMBER_OF_ROUNDS = 3;
     private static final int NUMBER_OF_OPERATORS = 3; // '+' or '-' or '*'
     private static final int RANGE_NUMB = 30;
-
-    private Calc() {
-    }
 
     public static void game() {
         Logger logger = Logger.getLogger(Calc.class.getName());

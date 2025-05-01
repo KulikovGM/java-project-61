@@ -9,10 +9,6 @@ import java.util.logging.Logger;
 public class Even {
     private static final int NUMBER_OF_ROUNDS = 3;
     private static final int RANGE_NUMB = 30;
-
-    private Even() {
-    }
-
     public static void game() {
         Logger logger = Logger.getLogger(Even.class.getName());
         logger.info("Answer 'yes' if the number is even, otherwise answer 'no'.");
