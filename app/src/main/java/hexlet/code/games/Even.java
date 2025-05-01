@@ -6,7 +6,7 @@ import java.security.SecureRandom;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
-public final class Even {
+public class Even {
     private static final int NUMBER_OF_ROUNDS = 3;
     private static final int RANGE_NUMB = 30;
 
