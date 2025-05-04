@@ -7,21 +7,21 @@
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=KulikovGM_java-project-61&metric=coverage)](https://sonarcloud.io/summary/new_code?id=KulikovGM_java-project-61)
 
 ### Game Even:
-https://asciinema.org/a/gh0Lq6hNUxy7O5xCegqsjsVOm
-[![asciicast](https://asciinema.org/a/gh0Lq6hNUxy7O5xCegqsjsVOm.svg)](https://asciinema.org/a/gh0Lq6hNUxy7O5xCegqsjsVOm)
+https://asciinema.org/a/9vHVZD9MHwoPb6npTfRlfwhLo
+[![asciicast](https://asciinema.org/a/9vHVZD9MHwoPb6npTfRlfwhLo.svg)](https://asciinema.org/a/9vHVZD9MHwoPb6npTfRlfwhLo)
 
 ### Game Calc:
-https://asciinema.org/a/T0ANj6JNeOubyuTNCyNXgzJY8
-[![asciicast](https://asciinema.org/a/T0ANj6JNeOubyuTNCyNXgzJY8.svg)](https://asciinema.org/a/T0ANj6JNeOubyuTNCyNXgzJY8)
+[https://asciinema.org/a/T0ANj6JNeOubyuTNCyNXgzJY8](https://asciinema.org/a/nMgMxWl52V1HNkOXh2321bCmd)
+[![asciicast](https://asciinema.org/a/nMgMxWl52V1HNkOXh2321bCmd.svg)](https://asciinema.org/a/nMgMxWl52V1HNkOXh2321bCmd)
 
 ### Game GCD:
-https://asciinema.org/a/p2KsfnuJrCsfCSwC9m0bR3mvQ
-[![asciicast](https://asciinema.org/a/p2KsfnuJrCsfCSwC9m0bR3mvQ.svg)](https://asciinema.org/a/p2KsfnuJrCsfCSwC9m0bR3mvQ)
+https://asciinema.org/a/yeOmpW0fIeteazuZF1HMTbQrO
+[![asciicast](https://asciinema.org/a/yeOmpW0fIeteazuZF1HMTbQrO.svg)](https://asciinema.org/a/yeOmpW0fIeteazuZF1HMTbQrO)
 
 ### Game Progression:
-https://asciinema.org/a/mZnRCO2fyPrVAtbii1Ab49IJB
-[![asciicast](https://asciinema.org/a/mZnRCO2fyPrVAtbii1Ab49IJB.svg)](https://asciinema.org/a/mZnRCO2fyPrVAtbii1Ab49IJB)
+ https://asciinema.org/a/68FpGfmFX3AGU9gUI1TbIiVZm
+[![asciicast](https://asciinema.org/a/68FpGfmFX3AGU9gUI1TbIiVZm.svg)](https://asciinema.org/a/68FpGfmFX3AGU9gUI1TbIiVZm)
 
 ### Game Prime:
-https://asciinema.org/a/MCpHuQRfEXMPExRVP5LVLIvzC
-[![asciicast](https://asciinema.org/a/MCpHuQRfEXMPExRVP5LVLIvzC.svg)](https://asciinema.org/a/MCpHuQRfEXMPExRVP5LVLIvzC)
+https://asciinema.org/a/v1j1qD8HpGgBvHSOVpSLrgBgV
+[![asciicast](https://asciinema.org/a/v1j1qD8HpGgBvHSOVpSLrgBgV.svg)](https://asciinema.org/a/v1j1qD8HpGgBvHSOVpSLrgBgV)
