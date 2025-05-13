@@ -6,7 +6,7 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
-public final class Engine {
+public class Engine {
     // Присваиваем каждой игре конкретный номер
     private static final int NUMBER_OF_GREETING = 1;
     private static final int NUMBER_OF_EVEN = 2;
@@ -14,9 +14,6 @@ public final class Engine {
     private static final int NUMBER_OF_GCD = 4;
     private static final int NUMBER_OF_PROGRESSION = 5;
     private static final int NUMBER_OF_PRIME = 6;
-
-    private Engine() {
-    }
 
     public static void runGame(int gameNumber) {
         if (gameNumber == NUMBER_OF_GREETING) {

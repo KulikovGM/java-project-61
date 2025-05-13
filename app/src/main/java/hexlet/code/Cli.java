@@ -13,6 +13,7 @@ public final class Cli {
     private Cli() {
     }
 
+
     public static void greetingByName() {
         Logger logger = Logger.getLogger(Cli.class.getName());
         logger.info("Welcome to the Brain Games!");
@@ -20,7 +21,7 @@ public final class Cli {
 
         Scanner scan = new Scanner(System.in);
         name = scan.nextLine();
-        String greetingName = String.format("Hello, %s!", name);
-        logger.info(greetingName);
-    }
+        logger.info(String.format("Hello, %s!", name));
+        }
+
 }
