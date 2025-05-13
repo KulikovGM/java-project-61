@@ -14,13 +14,12 @@ public class Even {
     }
 
     public static void game() {
-        Logger logger1 = Logger.getLogger(Even.class.getName());
-        logger1.info("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        Logger logger = Logger.getLogger(Even.class.getName());
+        logger.info("Answer 'yes' if the number is even, otherwise answer 'no'.");
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
             int number = operatorChoice.nextInt(RANGE_NUMB);
             String question = "Question: " + number;
-            Logger logger = Logger.getLogger(Even.class.getName());
             logger.info(question);
             Scanner scan1 = new Scanner(System.in);
             String answer = scan1.nextLine();
@@ -46,6 +45,6 @@ public class Even {
                 }
             }
         }
-        logger1.info("Congratulations, " + Cli.getName() + "!");
+        logger.info("Congratulations, " + Cli.getName() + "!");
     }
 }
