@@ -1,4 +1,9 @@
-## A project with 5 mini-games.
+## Project with 5 mini-games:
+### Even
+### Calc
+### GCD
+### Progression
+### Prime
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/KulikovGM/java-project-61/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/KulikovGM/java-project-61/actions)
@@ -13,14 +18,7 @@
 ```bash
 make run-dist
 ```
-Please choise the game:
-
-## Even
-## Calc
-## GCD
-## Progression
-## Prime
-
+Below are examples of games you can play.
 
 ### Game Even:
 https://asciinema.org/a/9vHVZD9MHwoPb6npTfRlfwhLo
