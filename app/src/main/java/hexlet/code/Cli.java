@@ -4,7 +4,7 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public final class Cli {
-    private static String name;
+    public static String name;
 
     public static String getName() {
         return name;
@@ -22,6 +22,6 @@ public final class Cli {
         Scanner scan = new Scanner(System.in);
         name = scan.nextLine();
         logger.info(String.format("Hello, %s!", name));
-        }
+    }
 
 }

@@ -1,9 +1,11 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 
 import java.util.Scanner;
-import java.util.logging.Logger;
 
 public class App {
     private static final int NUMBER_OF_GREETING = 1;
@@ -16,8 +18,7 @@ public class App {
     public static void main(String[] args) {
         int gameNumber;
         Scanner scanner = new Scanner(System.in);
-        Logger logger = Logger.getLogger(App.class.getName());
-        logger.info("""
+        System.out.println("""
                 Please enter the game number and press Enter.
                 1 - Greet
                 2 - Even
@@ -29,7 +30,7 @@ public class App {
                 """);
         gameNumber = scanner.nextInt();
         String choiceGame = String.format("Your choice: %s%n", gameNumber);
-        logger.info(choiceGame);
+        System.out.println(choiceGame);
         runGame(gameNumber);
     }
 
@@ -37,8 +38,9 @@ public class App {
         if (gameNumber == NUMBER_OF_GREETING) {
             Cli.greetingByName();
         } else if (gameNumber == NUMBER_OF_EVEN) {
-            Cli.greetingByName();
-            Even.game();
+            Engine.greetingByName();
+            Engine.runEngin();
+            //Even.game();
         } else if (gameNumber == NUMBER_OF_CALC) {
             Cli.greetingByName();
             Calc.game();

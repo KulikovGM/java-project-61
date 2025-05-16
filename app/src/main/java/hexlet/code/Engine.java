@@ -1,38 +1,57 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
+
 import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
+
+import java.util.Scanner;
+
 
 public class Engine {
-    // Присваиваем каждой игре конкретный номер
-    private static final int NUMBER_OF_GREETING = 1;
-    private static final int NUMBER_OF_EVEN = 2;
-    private static final int NUMBER_OF_CALC = 3;
-    private static final int NUMBER_OF_GCD = 4;
-    private static final int NUMBER_OF_PROGRESSION = 5;
-    private static final int NUMBER_OF_PRIME = 6;
 
-    public static void runGame(int gameNumber) {
-        if (gameNumber == NUMBER_OF_GREETING) {
-            Cli.greetingByName();
-        } else if (gameNumber == NUMBER_OF_EVEN) {
-            Cli.greetingByName();
-            Even.game();
-        } else if (gameNumber == NUMBER_OF_CALC) {
-            Cli.greetingByName();
-            Calc.game();
-        } else if (gameNumber == NUMBER_OF_GCD) {
-            Cli.greetingByName();
-            GCD.game();
-        } else if (gameNumber == NUMBER_OF_PROGRESSION) {
-            Cli.greetingByName();
-            Progression.game();
-        } else if (gameNumber == NUMBER_OF_PRIME) {
-            Cli.greetingByName();
-            Prime.game();
+    private static final int NUMBER_OF_ROUNDS = 3; // число раундов
+    private static final int RANGE_NUMB = 30; // диапазон значений
+    public static String[][] arrayQuestionsAndAnswers;
+
+    public static void greetingByName() {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.println("May I have your name? ");
+        Scanner scan = new Scanner(System.in);
+        Cli.name = scan.nextLine();
+        System.out.printf("Hello, %s!%n", Cli.getName());
+    }
+
+    public static void runEngin() {
+        System.out.println(Even.getRules());
+        arrayQuestionsAndAnswers = Even.getArrayQuestionsAndAnswers(NUMBER_OF_ROUNDS, RANGE_NUMB);
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+            getQuestion(arrayQuestionsAndAnswers[i][0]);
+            String answer = getAnswerFromUser();
+            String trueAnswer = arrayQuestionsAndAnswers[i][1];
+            System.out.println(checkAnswer(answer, trueAnswer));
+            if (!checkAnswer(answer, trueAnswer).equals("Correct!")) {
+                return;
+            }
+        }
+        System.out.println("Congratulations, " + Cli.getName() + "!");
+    }
+
+    public static void getQuestion(String number) {
+        System.out.println("Question: " + number);
+    }
+
+    public static String getAnswerFromUser() {
+        Scanner scanner = new Scanner(System.in);
+        String answer = scanner.nextLine();
+        System.out.println("Your answer: " + answer); //получаем ответ пользователя
+        return answer;
+    }
+
+    public static String checkAnswer(String answer, String trueAnswer) {
+        if (answer.equals(trueAnswer)) {
+            return "Correct!";
+        } else {
+            return ("'" + answer + "' is wrong answer ;(. Correct answer was '" + trueAnswer + "'.\n"
+                    + "Let's try again, " + Cli.getName() + "!");
         }
     }
 }
