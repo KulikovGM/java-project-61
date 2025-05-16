@@ -8,21 +8,25 @@ import java.util.Scanner;
 
 public class Engine {
 
-    private static final int NUMBER_OF_ROUNDS = 3; // число раундов
+    public static final int NUMBER_OF_ROUNDS = 3; // число раундов
     private static final int RANGE_NUMB = 30; // диапазон значений
-    public static String[][] arrayQuestionsAndAnswers;
+    private static String[][] arrayQuestionsAndAnswers;
+
+    public static void setArrayQuestionsAndAnswers(String[][] arrayQuestionsAndAnswers) {
+        Engine.arrayQuestionsAndAnswers = arrayQuestionsAndAnswers;
+    }
 
     public static void greetingByName() {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name? ");
         Scanner scan = new Scanner(System.in);
-        Cli.name = scan.nextLine();
+        Cli.setName(scan.nextLine());
         System.out.printf("Hello, %s!%n", Cli.getName());
     }
 
     public static void runEngin() {
         System.out.println(Even.getRules());
-        arrayQuestionsAndAnswers = Even.getArrayQuestionsAndAnswers(NUMBER_OF_ROUNDS, RANGE_NUMB);
+        setArrayQuestionsAndAnswers(Even.getArrayQuestionsAndAnswers(NUMBER_OF_ROUNDS, RANGE_NUMB));
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             getQuestion(arrayQuestionsAndAnswers[i][0]);
             String answer = getAnswerFromUser();

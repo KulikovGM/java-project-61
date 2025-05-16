@@ -4,7 +4,11 @@ import java.util.Scanner;
 import java.util.logging.Logger;
 
 public final class Cli {
-    public static String name;
+    private static String name;
+
+    public static void setName(String name) {
+        Cli.name = name;
+    }
 
     public static String getName() {
         return name;
@@ -12,7 +16,6 @@ public final class Cli {
 
     private Cli() {
     }
-
 
     public static void greetingByName() {
         Logger logger = Logger.getLogger(Cli.class.getName());

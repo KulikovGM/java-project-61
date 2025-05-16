@@ -2,6 +2,8 @@ package hexlet.code.games;
 
 import java.security.SecureRandom;
 
+import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
+
 public class Even {
     private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
@@ -9,7 +11,7 @@ public class Even {
         return RULES;
     }
 
-    public static String[][] arrayQuestionsAndAnswers = new String[3][2];
+    public static String[][] arrayQuestionsAndAnswers = new String[NUMBER_OF_ROUNDS][2];
 
     public static void questionAnswer(int round, int range) {
         SecureRandom operatorChoice = new SecureRandom();
