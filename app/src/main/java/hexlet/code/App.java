@@ -40,7 +40,6 @@ public class App {
         } else if (gameNumber == NUMBER_OF_EVEN) {
             Engine.greetingByName();
             Engine.runEngin();
-            //Even.game();
         } else if (gameNumber == NUMBER_OF_CALC) {
             Cli.greetingByName();
             Calc.game();

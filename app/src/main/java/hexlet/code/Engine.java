@@ -12,8 +12,8 @@ public class Engine {
     private static final int RANGE_NUMB = 30; // диапазон значений
     private static String[][] arrayQuestionsAndAnswers;
 
-    public static void setArrayQuestionsAndAnswers(String[][] arrayQuestionsAndAnswers) {
-        Engine.arrayQuestionsAndAnswers = arrayQuestionsAndAnswers;
+    public static void setArrayQuestionsAndAnswers(String[][] arrayQsAndAs) {
+        Engine.arrayQuestionsAndAnswers = arrayQsAndAs;
     }
 
     public static void greetingByName() {
