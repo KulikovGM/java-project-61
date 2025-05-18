@@ -7,6 +7,7 @@ import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
 
 import java.util.Scanner;
+
 @SuppressWarnings("java:S106")
 public class App {
     private static final int NUMBER_OF_GREETING = 1;

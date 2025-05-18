@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import java.util.Scanner;
+
 @SuppressWarnings("java:S106")
 public final class Cli {
     private static String name;

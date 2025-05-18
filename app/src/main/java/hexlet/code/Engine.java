@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-@SuppressWarnings("java:S106")
+@SuppressWarnings({"java:S106", "java:S1118"})
 public class Engine {
     public static final int ROUNDS = 3;
     private static String[][] arrayQuestionsAndAnswers;

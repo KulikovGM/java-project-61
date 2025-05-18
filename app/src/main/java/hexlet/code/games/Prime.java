@@ -3,6 +3,7 @@ package hexlet.code.games;
 import java.security.SecureRandom;
 
 import static hexlet.code.Engine.ROUNDS;
+
 @SuppressWarnings("java:S1118")
 public class Prime {
     private static final String RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";

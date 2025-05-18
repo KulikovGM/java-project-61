@@ -3,6 +3,7 @@ package hexlet.code.games;
 import java.security.SecureRandom;
 
 import static hexlet.code.Engine.ROUNDS;
+
 @SuppressWarnings("java:S1118")
 public class Progression {
     private static final int PROGRESSION_LENGTH = 10;
