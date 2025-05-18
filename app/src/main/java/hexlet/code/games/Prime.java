@@ -32,6 +32,9 @@ public class Prime {
                 break;
             }
         }
+        if (number == 0 || number == 1) {
+            trueAnswer = "no";
+        }
         ARRAY_QUESTIONS_AND_ANSWERS[round][0] = "" + number;
         ARRAY_QUESTIONS_AND_ANSWERS[round][1] = trueAnswer;
     }
