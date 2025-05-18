@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 import java.security.SecureRandom;
 
-import static hexlet.code.App.ROUNDS;
-
+import static hexlet.code.Engine.ROUNDS;
+@SuppressWarnings("java:S1118")
 public class GCD {
     private static final String RULES = "Find the greatest common divisor of given numbers.";
 

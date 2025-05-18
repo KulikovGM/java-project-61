@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 import java.security.SecureRandom;
 
-import static hexlet.code.App.ROUNDS;
-
+import static hexlet.code.Engine.ROUNDS;
+@SuppressWarnings({"java:S1118", "java:S6205"})
 public class Calc {
     private static final int NUMBER_OF_OPERATORS = 3; // '+' or '-' or '*'
     private static final String RULES = "What is the result of the expression?";

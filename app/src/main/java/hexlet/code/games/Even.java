@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 import java.security.SecureRandom;
 
-import static hexlet.code.App.ROUNDS;
-
+import static hexlet.code.Engine.ROUNDS;
+@SuppressWarnings("java:S1118")
 public class Even {
     private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
