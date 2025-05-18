@@ -37,11 +37,12 @@ public class Progression {
             array[i] = "" + (firstNum + addedNum * i);
             if (i == missedNum) {
                 currentNum = array[i];
-                array[i] = ".. ";
+                array[i] = "..";
             }
         }
+        String result = String.join(" ", array);
 
-        ARRAY_QUESTIONS_AND_ANSWERS[round][0] = Arrays.toString(array);
+        ARRAY_QUESTIONS_AND_ANSWERS[round][0] = result;
         ARRAY_QUESTIONS_AND_ANSWERS[round][1] = currentNum;
     }
 }
