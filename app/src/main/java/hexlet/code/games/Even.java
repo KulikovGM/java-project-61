@@ -11,21 +11,21 @@ public class Even {
         return RULES;
     }
 
-    public static String[][] arrayQuestionsAndAnswers = new String[NUMBER_OF_ROUNDS][2];
+    private static final String[][] ARRAY_QUESTIONS_AND_ANSWERS = new String[NUMBER_OF_ROUNDS][2];
 
     public static void questionAnswer(int round, int range) {
         SecureRandom operatorChoice = new SecureRandom();
         int number = operatorChoice.nextInt(range);
         String trueAnswer = number % 2 == 0 ? "yes" : "no";
-        arrayQuestionsAndAnswers[round][0] = "" + number;
-        arrayQuestionsAndAnswers[round][1] = trueAnswer;
+        ARRAY_QUESTIONS_AND_ANSWERS[round][0] = "" + number;
+        ARRAY_QUESTIONS_AND_ANSWERS[round][1] = trueAnswer;
     }
 
     public static String[][] getArrayQuestionsAndAnswers(int round, int range) {
         for (int i = 0; i < round; i++) {
             questionAnswer(i, range);
         }
-        return arrayQuestionsAndAnswers;
+        return ARRAY_QUESTIONS_AND_ANSWERS;
     }
 
 }

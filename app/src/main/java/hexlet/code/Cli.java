@@ -5,8 +5,8 @@ import java.util.Scanner;
 public final class Cli {
     private static String name;
 
-    public static void setName(String name) {
-        Cli.name = name;
+    public static void setName(String nameCli) {
+        Cli.name = nameCli;
     }
 
     public static String getName() {
