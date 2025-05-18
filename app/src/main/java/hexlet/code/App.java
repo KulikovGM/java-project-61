@@ -1,6 +1,7 @@
 package hexlet.code;
 
 import hexlet.code.games.Calc;
+import hexlet.code.games.Even;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Prime;
 import hexlet.code.games.Progression;
@@ -14,6 +15,9 @@ public class App {
     private static final int NUMBER_OF_GCD = 4;
     private static final int NUMBER_OF_PROGRESSION = 5;
     private static final int NUMBER_OF_PRIME = 6;
+
+    public static final int ROUNDS = 3; // число раундов
+    private static final int RANGE = 30; // диапазон значений
 
     public static void main(String[] args) {
         int gameNumber;
@@ -39,19 +43,19 @@ public class App {
             Cli.greetingByName();
         } else if (gameNumber == NUMBER_OF_EVEN) {
             Engine.greetingByName();
-            Engine.runEngin();
+            Engine.runEngin(Even.getRules(), Even.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         } else if (gameNumber == NUMBER_OF_CALC) {
-            Cli.greetingByName();
-            Calc.game();
+            Engine.greetingByName();
+            Engine.runEngin(Calc.getRules(), Calc.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         } else if (gameNumber == NUMBER_OF_GCD) {
-            Cli.greetingByName();
-            GCD.game();
+            Engine.greetingByName();
+            Engine.runEngin(GCD.getRules(), GCD.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         } else if (gameNumber == NUMBER_OF_PROGRESSION) {
-            Cli.greetingByName();
-            Progression.game();
+            Engine.greetingByName();
+            Engine.runEngin(Progression.getRules(), Progression.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         } else if (gameNumber == NUMBER_OF_PRIME) {
-            Cli.greetingByName();
-            Prime.game();
+            Engine.greetingByName();
+            Engine.runEngin(Prime.getRules(), Prime.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         }
     }
 }

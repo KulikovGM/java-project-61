@@ -1,37 +1,36 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.security.SecureRandom;
-import java.util.Scanner;
+
+import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
 
 public class GCD {
-    private static final int NUMBER_OF_ROUNDS = 3;
-    private static final int RANGE = 100;
-    public static void game() {
+    private static final String RULES = "Find the greatest common divisor of given numbers.";
 
-        System.out.println("Find the greatest common divisor of given numbers.");
-        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            SecureRandom secureRandom = new SecureRandom();
-            int number = secureRandom.nextInt(RANGE);
-            int number2 = secureRandom.nextInt(RANGE);
-            System.out.println("Question: " + number + " " + number2);
-            Scanner scan1 = new Scanner(System.in);
-            int answer = scan1.nextInt();
-            System.out.println("Your answer: " + answer);
-            if (answer == gcd(number, number2)) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + gcd(number, number2) + "'.");
-                System.out.println("Let's try again, " + Cli.getName() + "!");
-                return;
-            }
+
+    public static String getRules() {
+        return RULES;
+    }
+
+    private static final String[][] ARRAY_QUESTIONS_AND_ANSWERS = new String[NUMBER_OF_ROUNDS][2];
+
+    public static String[][] getArrayQuestionsAndAnswers(int round, int range) {
+        for (int i = 0; i < round; i++) {
+            questionAnswer(i, range);
         }
-        System.out.println("Congratulations, " + Cli.getName() + "!");
+        return ARRAY_QUESTIONS_AND_ANSWERS;
+    }
+
+    public static void questionAnswer(int round, int range) {
+        SecureRandom operatorChoice = new SecureRandom();
+        int number1 = operatorChoice.nextInt(range);
+        int number2 = operatorChoice.nextInt(range);
+
+        ARRAY_QUESTIONS_AND_ANSWERS[round][0] = number1 + " " + number2;
+        ARRAY_QUESTIONS_AND_ANSWERS[round][1] = String.valueOf(gcd(number1, number2));
     }
 
     public static int gcd(int a, int b) {
         return b == 0 ? a : gcd(b, a % b);
-    }
+    } // метод для определения наибольшего общего делителя
 }

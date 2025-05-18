@@ -1,10 +1,6 @@
 package hexlet.code;
 
-
-import hexlet.code.games.Even;
-
 import java.util.Scanner;
-
 
 public class Engine {
 
@@ -24,9 +20,9 @@ public class Engine {
         System.out.printf("Hello, %s!%n", Cli.getName());
     }
 
-    public static void runEngin() {
-        System.out.println(Even.getRules());
-        setArrayQuestionsAndAnswers(Even.getArrayQuestionsAndAnswers(NUMBER_OF_ROUNDS, RANGE_NUMB));
+    public static void runEngin(String rules, String[][] arrayQsAndAs) {
+        System.out.println(rules);
+        setArrayQuestionsAndAnswers(arrayQsAndAs);
         for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             getQuestion(arrayQuestionsAndAnswers[i][0]);
             String answer = getAnswerFromUser();

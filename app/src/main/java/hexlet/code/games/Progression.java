@@ -1,49 +1,48 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.security.SecureRandom;
-import java.util.Scanner;
+import java.util.Arrays;
+
+import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
 
 public class Progression {
-    private static final int NUMBER_OF_ROUNDS = 3;
-    private static final int RANGE_NUMB = 10;
     private static final int PROGRESSION_LENGTH = 10;
     private static final int ADD_NUMBER_FROM = 2;
     private static final int ADD_NUMBER_TO = 5;
 
-    public static void game() {
+    private static final String RULES = "What number is missing in the progression?";
 
-        System.out.println("What number is missing in the progression?");
-        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
-            SecureRandom secureRandom = new SecureRandom();
-            int firstNum = secureRandom.nextInt(RANGE_NUMB);
-            int addedNum = secureRandom.nextInt(ADD_NUMBER_FROM, ADD_NUMBER_TO);
-            int missedNum = secureRandom.nextInt(RANGE_NUMB);
-            int currentNum = 0;
-            int[] array = new int[PROGRESSION_LENGTH];
-            System.out.print("Question: ");
-            for (int j = 0; j < PROGRESSION_LENGTH; j++) {
-                array[j] = firstNum + addedNum * j;
-                if (j == missedNum) {
-                    currentNum = array[j];
-                    System.out.print(".." + " ");
-                } else {
-                    System.out.print(array[j] + " ");
-                }
-            }
-            Scanner scan1 = new Scanner(System.in);
-            int answer = scan1.nextInt();
-            System.out.println("Your answer: " + answer);
-            if (answer == currentNum) {
-                System.out.println("Correct!");
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '"
-                        + currentNum + "'.");
-                System.out.println("Let's try again, " + Cli.getName() + "!");
-                return;
+    public static String getRules() {
+        return RULES;
+    }
+
+    private static final String[][] ARRAY_QUESTIONS_AND_ANSWERS = new String[NUMBER_OF_ROUNDS][2];
+
+    public static String[][] getArrayQuestionsAndAnswers(int round, int range) {
+        for (int i = 0; i < round; i++) {
+            questionAnswer(i, range);
+        }
+        return ARRAY_QUESTIONS_AND_ANSWERS;
+    }
+
+    public static void questionAnswer(int round, int range) {
+        SecureRandom secureRandom = new SecureRandom();
+        int firstNum = secureRandom.nextInt(range);
+        int addedNum = secureRandom.nextInt(ADD_NUMBER_FROM, ADD_NUMBER_TO);
+        int missedNum = secureRandom.nextInt(ADD_NUMBER_FROM, ADD_NUMBER_TO);
+        String currentNum = "1";
+        String[] array = new String[PROGRESSION_LENGTH];
+
+        for (int i = 0; i < PROGRESSION_LENGTH; i++) {
+            array[i] = "" + (firstNum + addedNum * i);
+            if (i == missedNum) {
+                currentNum = array[i];
+                array[i] = ".. ";
             }
         }
-        System.out.println("Congratulations, " + Cli.getName() + "!");
+
+        ARRAY_QUESTIONS_AND_ANSWERS[round][0] = Arrays.toString(array);
+        ARRAY_QUESTIONS_AND_ANSWERS[round][1] = currentNum;
     }
 }
+
