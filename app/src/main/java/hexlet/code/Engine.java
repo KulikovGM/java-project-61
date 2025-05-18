@@ -1,11 +1,10 @@
 package hexlet.code;
 
 import java.util.Scanner;
-
+import static hexlet.code.App.ROUNDS;
+@SuppressWarnings("java:S106")
 public class Engine {
 
-    public static final int NUMBER_OF_ROUNDS = 3; // число раундов
-    private static final int RANGE_NUMB = 30; // диапазон значений
     private static String[][] arrayQuestionsAndAnswers;
 
     public static void setArrayQuestionsAndAnswers(String[][] arrayQsAndAs) {
@@ -23,7 +22,7 @@ public class Engine {
     public static void runEngin(String rules, String[][] arrayQsAndAs) {
         System.out.println(rules);
         setArrayQuestionsAndAnswers(arrayQsAndAs);
-        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+        for (int i = 0; i < ROUNDS; i++) {
             getQuestion(arrayQuestionsAndAnswers[i][0]);
             String answer = getAnswerFromUser();
             String trueAnswer = arrayQuestionsAndAnswers[i][1];
