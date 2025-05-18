@@ -2,17 +2,19 @@ package hexlet.code.games;
 
 import java.security.SecureRandom;
 
-import static hexlet.code.Engine.NUMBER_OF_ROUNDS;
+import static hexlet.code.App.ROUNDS;
 
 public class Even {
     private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
+    public Even() {
+    }
 
     public static String getRules() {
         return RULES;
     }
 
-    private static final String[][] ARRAY_QUESTIONS_AND_ANSWERS = new String[NUMBER_OF_ROUNDS][2];
+    private static final String[][] ARRAY_QUESTIONS_AND_ANSWERS = new String[ROUNDS][2];
 
     public static String[][] getArrayQuestionsAndAnswers(int round, int range) {
         for (int i = 0; i < round; i++) {
