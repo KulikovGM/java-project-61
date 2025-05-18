@@ -11,7 +11,7 @@ public class Even {
         return RULES;
     }
 
-    public static String[][] arrayQuestionsAndAnswers = new String[NUMBER_OF_ROUNDS][2];
+    private static final String[][] arrayQuestionsAndAnswers = new String[NUMBER_OF_ROUNDS][2];
 
     public static void questionAnswer(int round, int range) {
         SecureRandom operatorChoice = new SecureRandom();
