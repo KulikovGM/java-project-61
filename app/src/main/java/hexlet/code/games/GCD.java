@@ -1,34 +1,25 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.security.SecureRandom;
 
-import static hexlet.code.Engine.ROUNDS;
-
-@SuppressWarnings("java:S1118")
 public class GCD {
+    public static final int ROUNDS = 3;
+    private static final int RANGE = 30;
     private static final String RULES = "Find the greatest common divisor of given numbers.";
 
+    public static void run() {
+        String[][] arrayQuestionsAndAnswers = new String[ROUNDS][2];
+        for (int i = 0; i < ROUNDS; i++) {
+            SecureRandom operatorChoice = new SecureRandom();
+            int number1 = operatorChoice.nextInt(RANGE);
+            int number2 = operatorChoice.nextInt(RANGE);
 
-    public static String getRules() {
-        return RULES;
-    }
-
-    private static final String[][] ARRAY_QUESTIONS_AND_ANSWERS = new String[ROUNDS][2];
-
-    public static String[][] getArrayQuestionsAndAnswers(int round, int range) {
-        for (int i = 0; i < round; i++) {
-            questionAnswer(i, range);
+            arrayQuestionsAndAnswers[i][0] = number1 + " " + number2;
+            arrayQuestionsAndAnswers[i][1] = String.valueOf(gcd(number1, number2));
         }
-        return ARRAY_QUESTIONS_AND_ANSWERS;
-    }
-
-    public static void questionAnswer(int round, int range) {
-        SecureRandom operatorChoice = new SecureRandom();
-        int number1 = operatorChoice.nextInt(range);
-        int number2 = operatorChoice.nextInt(range);
-
-        ARRAY_QUESTIONS_AND_ANSWERS[round][0] = number1 + " " + number2;
-        ARRAY_QUESTIONS_AND_ANSWERS[round][1] = String.valueOf(gcd(number1, number2));
+        Engine.runEngin(RULES, arrayQuestionsAndAnswers);
     }
 
     public static int gcd(int a, int b) {

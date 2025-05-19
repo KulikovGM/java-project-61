@@ -1,49 +1,41 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.security.SecureRandom;
 
-import static hexlet.code.Engine.ROUNDS;
-
-@SuppressWarnings("java:S1118")
 public class Progression {
+    public static final int ROUNDS = 3;
+    private static final int RANGE = 30;
     private static final int PROGRESSION_LENGTH = 10;
     private static final int ADD_NUMBER_FROM = 2;
     private static final int ADD_NUMBER_TO = 5;
 
     private static final String RULES = "What number is missing in the progression?";
 
-    public static String getRules() {
-        return RULES;
-    }
+    public static void run() {
+        String[][] arrayQuestionsAndAnswers = new String[ROUNDS][2];
+        for (int i = 0; i < ROUNDS; i++) {
+            SecureRandom secureRandom = new SecureRandom();
+            int firstNum = secureRandom.nextInt(RANGE);
+            int addedNum = secureRandom.nextInt(ADD_NUMBER_FROM, ADD_NUMBER_TO);
+            int missedNum = secureRandom.nextInt(ADD_NUMBER_FROM, ADD_NUMBER_TO);
+            String currentNum = "1";
+            String[] array = new String[PROGRESSION_LENGTH];
 
-    private static final String[][] ARRAY_QUESTIONS_AND_ANSWERS = new String[ROUNDS][2];
-
-    public static String[][] getArrayQuestionsAndAnswers(int round, int range) {
-        for (int i = 0; i < round; i++) {
-            questionAnswer(i, range);
-        }
-        return ARRAY_QUESTIONS_AND_ANSWERS;
-    }
-
-    public static void questionAnswer(int round, int range) {
-        SecureRandom secureRandom = new SecureRandom();
-        int firstNum = secureRandom.nextInt(range);
-        int addedNum = secureRandom.nextInt(ADD_NUMBER_FROM, ADD_NUMBER_TO);
-        int missedNum = secureRandom.nextInt(ADD_NUMBER_FROM, ADD_NUMBER_TO);
-        String currentNum = "1";
-        String[] array = new String[PROGRESSION_LENGTH];
-
-        for (int i = 0; i < PROGRESSION_LENGTH; i++) {
-            array[i] = "" + (firstNum + addedNum * i);
-            if (i == missedNum) {
-                currentNum = array[i];
-                array[i] = "..";
+            for (int j = 0; j < PROGRESSION_LENGTH; j++) {
+                array[j] = "" + (firstNum + addedNum * j);
+                if (j == missedNum) {
+                    currentNum = array[j];
+                    array[j] = "..";
+                }
             }
-        }
-        String result = String.join(" ", array);
+            String result = String.join(" ", array);
 
-        ARRAY_QUESTIONS_AND_ANSWERS[round][0] = result;
-        ARRAY_QUESTIONS_AND_ANSWERS[round][1] = currentNum;
+            arrayQuestionsAndAnswers[i][0] = result;
+            arrayQuestionsAndAnswers[i][1] = currentNum;
+        }
+        Engine.runEngin(RULES, arrayQuestionsAndAnswers);
     }
 }
 

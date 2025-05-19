@@ -44,13 +44,13 @@ public class App {
         } else if (gameNumber == NUMBER_OF_EVEN) {
             Even.run();
         } else if (gameNumber == NUMBER_OF_CALC) {
-            Engine.runEngin(Calc.getRules(), Calc.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
+            Calc.run();
         } else if (gameNumber == NUMBER_OF_GCD) {
-            Engine.runEngin(GCD.getRules(), GCD.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
+            GCD.run();
         } else if (gameNumber == NUMBER_OF_PROGRESSION) {
-            Engine.runEngin(Progression.getRules(), Progression.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
+            Progression.run();
         } else if (gameNumber == NUMBER_OF_PRIME) {
-            Engine.runEngin(Prime.getRules(), Prime.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
+            Prime.run();
         }
     }
 }
