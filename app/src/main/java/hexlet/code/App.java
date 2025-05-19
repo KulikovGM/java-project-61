@@ -8,7 +8,6 @@ import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
-@SuppressWarnings("java:S106")
 public class App {
     private static final int NUMBER_OF_GREETING = 1;
     private static final int NUMBER_OF_EVEN = 2;
@@ -43,19 +42,14 @@ public class App {
         if (gameNumber == NUMBER_OF_GREETING) {
             Cli.greetingByName();
         } else if (gameNumber == NUMBER_OF_EVEN) {
-            Engine.greetingByName();
-            Engine.runEngin(Even.getRules(), Even.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
+            Even.run();
         } else if (gameNumber == NUMBER_OF_CALC) {
-            Engine.greetingByName();
             Engine.runEngin(Calc.getRules(), Calc.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         } else if (gameNumber == NUMBER_OF_GCD) {
-            Engine.greetingByName();
             Engine.runEngin(GCD.getRules(), GCD.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         } else if (gameNumber == NUMBER_OF_PROGRESSION) {
-            Engine.greetingByName();
             Engine.runEngin(Progression.getRules(), Progression.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         } else if (gameNumber == NUMBER_OF_PRIME) {
-            Engine.greetingByName();
             Engine.runEngin(Prime.getRules(), Prime.getArrayQuestionsAndAnswers(ROUNDS, RANGE));
         }
     }

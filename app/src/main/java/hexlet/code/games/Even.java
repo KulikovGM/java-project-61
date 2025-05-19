@@ -1,31 +1,22 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import java.security.SecureRandom;
 
-import static hexlet.code.Engine.ROUNDS;
-
-@SuppressWarnings("java:S1118")
 public class Even {
+    public static final int ROUNDS = 3;
+    private static final int RANGE = 30;
     private static final String RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-    public static String getRules() {
-        return RULES;
-    }
-
-    private static final String[][] ARRAY_QUESTIONS_AND_ANSWERS = new String[ROUNDS][2];
-
-    public static String[][] getArrayQuestionsAndAnswers(int round, int range) {
-        for (int i = 0; i < round; i++) {
-            questionAnswer(i, range);
+    public static void run() {
+        String[][] arrayQuestionsAndAnswers = new String[ROUNDS][2];
+        for (int i = 0; i < ROUNDS; i++) {
+            SecureRandom operatorChoice = new SecureRandom();
+            int number = operatorChoice.nextInt(RANGE);
+            String trueAnswer = number % 2 == 0 ? "yes" : "no";
+            arrayQuestionsAndAnswers[i][0] = "" + number;
+            arrayQuestionsAndAnswers[i][1] = trueAnswer;
         }
-        return ARRAY_QUESTIONS_AND_ANSWERS;
-    }
-
-    public static void questionAnswer(int round, int range) {
-        SecureRandom operatorChoice = new SecureRandom();
-        int number = operatorChoice.nextInt(range);
-        String trueAnswer = number % 2 == 0 ? "yes" : "no";
-        ARRAY_QUESTIONS_AND_ANSWERS[round][0] = "" + number;
-        ARRAY_QUESTIONS_AND_ANSWERS[round][1] = trueAnswer;
+        Engine.runEngin(RULES, arrayQuestionsAndAnswers);
     }
 }

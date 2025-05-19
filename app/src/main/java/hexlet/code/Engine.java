@@ -2,7 +2,7 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-@SuppressWarnings({"java:S106", "java:S1118"})
+//@SuppressWarnings({"java:S106", "java:S1118"})
 public class Engine {
     public static final int ROUNDS = 3;
     private static String[][] arrayQuestionsAndAnswers;
@@ -11,46 +11,28 @@ public class Engine {
         Engine.arrayQuestionsAndAnswers = arrayQsAndAs;
     }
 
-    public static void greetingByName() {
+    public static void runEngin(String rules, String[][] arrayQnsAndAns) {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name? ");
         Scanner scan = new Scanner(System.in);
-        Cli.setName(scan.nextLine());
-        System.out.printf("Hello, %s!%n", Cli.getName());
-    }
-
-    public static void runEngin(String rules, String[][] arrayQnsAndAns) {
+        String name = scan.nextLine();
+        System.out.printf("Hello, %s!%n", name);
         System.out.println(rules);
         setArrayQuestionsAndAnswers(arrayQnsAndAns);
         for (int i = 0; i < ROUNDS; i++) {
-            getQuestion(arrayQuestionsAndAnswers[i][0]);
-            String answer = getAnswerFromUser();
+            System.out.println("Question: " + arrayQuestionsAndAnswers[i][0]);
+            Scanner scanner = new Scanner(System.in);
+            String answer = scanner.nextLine();
+            System.out.println("Your answer: " + answer);
             String trueAnswer = arrayQuestionsAndAnswers[i][1];
-            System.out.println(checkAnswer(answer, trueAnswer));
-            if (!checkAnswer(answer, trueAnswer).equals("Correct!")) {
+            if (answer.equals(trueAnswer)) {
+                System.out.println("Correct!");
+            } else {
+                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + trueAnswer + "'.\n"
+                        + "Let's try again, " + name + "!");
                 return;
             }
         }
-        System.out.println("Congratulations, " + Cli.getName() + "!");
-    }
-
-    public static void getQuestion(String number) {
-        System.out.println("Question: " + number);
-    }
-
-    public static String getAnswerFromUser() {
-        Scanner scanner = new Scanner(System.in);
-        String answer = scanner.nextLine();
-        System.out.println("Your answer: " + answer); //получаем ответ пользователя
-        return answer;
-    }
-
-    public static String checkAnswer(String answer, String trueAnswer) {
-        if (answer.equals(trueAnswer)) {
-            return "Correct!";
-        } else {
-            return ("'" + answer + "' is wrong answer ;(. Correct answer was '" + trueAnswer + "'.\n"
-                    + "Let's try again, " + Cli.getName() + "!");
-        }
+        System.out.println("Congratulations, " + name + "!");
     }
 }
