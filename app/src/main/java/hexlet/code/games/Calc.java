@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 
 import java.security.SecureRandom;
 
+@SuppressWarnings("java:S1118")
 public class Calc {
     public static final int ROUNDS = 3;
     private static final int RANGE = 30;
@@ -17,22 +18,20 @@ public class Calc {
             int number1 = operatorChoice.nextInt(RANGE);
             int number2 = operatorChoice.nextInt(RANGE);
             int operator = operatorChoice.nextInt(NUMBER_OF_OPERATORS);
-            String sign = switch (operator) {
-                case 0 -> "+";
-                case 1 -> "-";
-                case 2 -> "*";
-                default -> "";
-            };
+            String sign;
             int trueAnswer;
             switch (operator) {
                 case 0 -> {
                     trueAnswer = number1 + number2;
+                    sign = "+";
                 }
                 case 1 -> {
                     trueAnswer = number1 - number2;
+                    sign = "-";
                 }
                 case 2 -> {
                     trueAnswer = number1 * number2;
+                    sign = "*";
                 }
                 default -> {
                     return;

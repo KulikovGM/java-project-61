@@ -8,6 +8,7 @@ import hexlet.code.games.Progression;
 
 import java.util.Scanner;
 
+@SuppressWarnings("java:S106")
 public class App {
     private static final int NUMBER_OF_GREETING = 1;
     private static final int NUMBER_OF_EVEN = 2;
@@ -15,9 +16,6 @@ public class App {
     private static final int NUMBER_OF_GCD = 4;
     private static final int NUMBER_OF_PROGRESSION = 5;
     private static final int NUMBER_OF_PRIME = 6;
-
-    public static final int ROUNDS = 3; // число раундов
-    private static final int RANGE = 30; // диапазон значений
 
     public static void main(String[] args) {
         int gameNumber;

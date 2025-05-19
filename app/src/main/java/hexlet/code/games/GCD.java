@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 
 import java.security.SecureRandom;
 
+@SuppressWarnings("java:S1118")
 public class GCD {
     public static final int ROUNDS = 3;
     private static final int RANGE = 30;

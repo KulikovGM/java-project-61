@@ -2,14 +2,9 @@ package hexlet.code;
 
 import java.util.Scanner;
 
-//@SuppressWarnings({"java:S106", "java:S1118"})
+@SuppressWarnings({"java:S106", "java:S1118"})
 public class Engine {
     public static final int ROUNDS = 3;
-    private static String[][] arrayQuestionsAndAnswers;
-
-    public static void setArrayQuestionsAndAnswers(String[][] arrayQsAndAs) {
-        Engine.arrayQuestionsAndAnswers = arrayQsAndAs;
-    }
 
     public static void runEngin(String rules, String[][] arrayQnsAndAns) {
         System.out.println("Welcome to the Brain Games!");
@@ -18,13 +13,13 @@ public class Engine {
         String name = scan.nextLine();
         System.out.printf("Hello, %s!%n", name);
         System.out.println(rules);
-        setArrayQuestionsAndAnswers(arrayQnsAndAns);
+
         for (int i = 0; i < ROUNDS; i++) {
-            System.out.println("Question: " + arrayQuestionsAndAnswers[i][0]);
+            System.out.println("Question: " + arrayQnsAndAns[i][0]);
             Scanner scanner = new Scanner(System.in);
             String answer = scanner.nextLine();
             System.out.println("Your answer: " + answer);
-            String trueAnswer = arrayQuestionsAndAnswers[i][1];
+            String trueAnswer = arrayQnsAndAns[i][1];
             if (answer.equals(trueAnswer)) {
                 System.out.println("Correct!");
             } else {
