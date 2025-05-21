@@ -7,7 +7,6 @@ import java.security.SecureRandom;
 @SuppressWarnings("java:S1118")
 public class Calc {
     private static final int RANGE = 30;
-    private static final int NUMBER_OF_OPERATORS = 3; // '+' or '-' or '*'
     private static final String RULES = "What is the result of the expression?";
 
     public static void run() {
