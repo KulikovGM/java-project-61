@@ -6,17 +6,15 @@ import java.security.SecureRandom;
 
 @SuppressWarnings("java:S1118")
 public class GCD {
-    public static final int ROUNDS = 3;
     private static final int RANGE = 30;
     private static final String RULES = "Find the greatest common divisor of given numbers.";
 
     public static void run() {
-        String[][] arrayQuestionsAndAnswers = new String[ROUNDS][2];
-        for (int i = 0; i < ROUNDS; i++) {
+        String[][] arrayQuestionsAndAnswers = new String[Engine.ROUNDS][2];
+        for (int i = 0; i < Engine.ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
             int number1 = operatorChoice.nextInt(RANGE);
             int number2 = operatorChoice.nextInt(RANGE);
-
             arrayQuestionsAndAnswers[i][0] = number1 + " " + number2;
             arrayQuestionsAndAnswers[i][1] = String.valueOf(gcd(number1, number2));
         }
