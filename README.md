@@ -16,21 +16,21 @@ make run-dist
 Below are examples of games you can play.
 
 ### Game Even:
-https://asciinema.org/a/X5ppAWJynkTKBBEAwC7pvAbvv
-[![asciicast](https://asciinema.org/a/X5ppAWJynkTKBBEAwC7pvAbvv.svg)](https://asciinema.org/a/X5ppAWJynkTKBBEAwC7pvAbvv)
+https://asciinema.org/a/qhkKNSk46yFsS4NrZIriELsGc
+[![asciicast](https://asciinema.org/a/qhkKNSk46yFsS4NrZIriELsGc.svg)](https://asciinema.org/a/qhkKNSk46yFsS4NrZIriELsGc)
 
 ### Game Calc:
-https://asciinema.org/a/RZIDCqfHqi1kynzidok5ci2qb
-[![asciicast](https://asciinema.org/a/RZIDCqfHqi1kynzidok5ci2qb.svg)](https://asciinema.org/a/RZIDCqfHqi1kynzidok5ci2qb)
+https://asciinema.org/a/B9AIbHGB3LR7aS0MUZ0yIQPnL
+[![asciicast](https://asciinema.org/a/B9AIbHGB3LR7aS0MUZ0yIQPnL.svg)](https://asciinema.org/a/B9AIbHGB3LR7aS0MUZ0yIQPnL)
 
 ### Game GCD:
-https://asciinema.org/a/POusPqRfHYyYUDbvKrVLnlyA9
-[![asciicast](https://asciinema.org/a/POusPqRfHYyYUDbvKrVLnlyA9.svg)](https://asciinema.org/a/POusPqRfHYyYUDbvKrVLnlyA9)
+https://asciinema.org/a/CG7mCuEn4RMzN821SGGWD08LU
+[![asciicast](https://asciinema.org/a/CG7mCuEn4RMzN821SGGWD08LU.svg)](https://asciinema.org/a/CG7mCuEn4RMzN821SGGWD08LU)
 
 ### Game Progression:
-https://asciinema.org/a/lSAhLmAwTG0bmjCKsyevxPalc
-[![asciicast](https://asciinema.org/a/lSAhLmAwTG0bmjCKsyevxPalc.svg)](https://asciinema.org/a/lSAhLmAwTG0bmjCKsyevxPalc)
+https://asciinema.org/a/hSKbzmuvjzYWlTRODdrBwVnkb
+[![asciicast](https://asciinema.org/a/hSKbzmuvjzYWlTRODdrBwVnkb.svg)](https://asciinema.org/a/hSKbzmuvjzYWlTRODdrBwVnkb)
 
 ### Game Prime:
-https://asciinema.org/a/mNFPf3O63LoIP1jIb8ZY5sUJB
-[![asciicast](https://asciinema.org/a/mNFPf3O63LoIP1jIb8ZY5sUJB.svg)](https://asciinema.org/a/mNFPf3O63LoIP1jIb8ZY5sUJB)
+https://asciinema.org/a/wglpKLcfe5kD4LKUX21lXg53d
+[![asciicast](https://asciinema.org/a/wglpKLcfe5kD4LKUX21lXg53d.svg)](https://asciinema.org/a/wglpKLcfe5kD4LKUX21lXg53d)
