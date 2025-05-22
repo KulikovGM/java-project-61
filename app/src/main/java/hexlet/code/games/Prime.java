@@ -14,23 +14,23 @@ public class Prime {
         for (int i = 0; i < Engine.ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
             int number = operatorChoice.nextInt(RANGE);
-            String trueAnswer = getTrueAnswer(number);
+            String trueAnswer = isPrime(number) ? "yes" : "no";
             arrayQuestionsAndAnswers[i][0] = "" + number;
             arrayQuestionsAndAnswers[i][1] = trueAnswer;
         }
         Engine.runEngin(RULES, arrayQuestionsAndAnswers);
     }
 
-    public static String getTrueAnswer(int number) {
+    public static boolean isPrime(int number) {
         if (number == 0 || number == 1) {
-            return "no";
+            return false;
         }
         for (int j = 2; j < number; j++) {
             if (number % j == 0) {
-                return "no";
+                return false;
             }
         }
-        return "yes";
+        return true;
     }
 }
 
