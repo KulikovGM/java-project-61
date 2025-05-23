@@ -14,10 +14,14 @@ public class Even {
         for (int i = 0; i < Engine.ROUNDS; i++) {
             SecureRandom operatorChoice = new SecureRandom();
             int number = operatorChoice.nextInt(RANGE);
-            String trueAnswer = number % 2 == 0 ? "yes" : "no";
+            String trueAnswer = isEven(number) ? "yes" : "no";
             arrayQuestionsAndAnswers[i][0] = "" + number;
             arrayQuestionsAndAnswers[i][1] = trueAnswer;
         }
         Engine.runEngin(RULES, arrayQuestionsAndAnswers);
+    }
+
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
     }
 }
